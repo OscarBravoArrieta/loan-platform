@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,6 +10,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +34,7 @@ import { RequestListComponent } from './components/request-list/request-list.com
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
@@ -41,7 +44,9 @@ import { RequestListComponent } from './components/request-list/request-list.com
     MatInputModule,
     MatCardModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
