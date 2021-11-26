@@ -9,27 +9,17 @@
  export class ApplyForALoanComponent implements OnInit {
      loanForm: FormGroup
      statusForm: boolean = false
+     loanAmount: number = 0
+     loanDate: Date = new Date
 
-
-  constructor(public fb: FormBuilder) {
-      this.loanForm = this.fb.group({
-           idUser: [null, [Validators.required]],
-           name:[null, [Validators.required]],
-           email: [null, Validators.compose([Validators.email, Validators.required])],
-
-      })
-
-   }
-
-  //  email = new FormControl('', [Validators.required, Validators.email]);
-
-  //  getErrorMessage() {
-  //    if (this.email.hasError('required')) {
-  //      return 'You must enter a value';
-  //    }
-
-  //    return this.email.hasError('email') ? 'Not a valid email' : '';
-  //  }
+     //-----------------------------------------------------------------------------------------------------
+     constructor(public fb: FormBuilder) {
+         this.loanForm = this.fb.group({
+             idUser: [null, [Validators.required]],
+             name:[null, [Validators.required]],
+             email: [null, Validators.compose([Validators.email, Validators.required])],
+         })
+     }
      //-----------------------------------------------------------------------------------------------------
      ngOnInit(): void {
          this.statusForm = !this.loanForm.invalid
@@ -41,12 +31,20 @@
          if (this.loanForm.valid) {
 
           console.log("Todos los datos son válidos")
-      }
-      else {
-          console.log("Hay datos inválidos en el formulario")
-      }
-
-
+         }
+         else {
+            console.log("Hay datos inválidos en el formulario")
+         }
      }
-
+     //-----------------------------------------------------------------------------------------------------
+     getAmount(e: number):void{
+         this.loanAmount = e
+         console.log('id recibido:...', e)
+     }
+     //-----------------------------------------------------------------------------------------------------
+     getDate(e: Date):void{
+         this.loanDate = e
+         console.log('id recibido fecha:...', e)
+     }
+     //-----------------------------------------------------------------------------------------------------
  }

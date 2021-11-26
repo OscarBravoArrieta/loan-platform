@@ -32,11 +32,10 @@
                          <input matInput placeholder="Correo" formControlName = "email">
                          <mat-error *ngIf="this.loanForm.get('email')?.hasError('email') && statusForm"></mat-error>
                          <mat-error *ngIf="this.loanForm.get('email')?.hasError('requerid') && statusForm"></mat-error>
-                        <mat-hint *ngIf="this.loanForm.get('email')?.hasError('email')">Cédula</mat-hint>
                      </mat-form-field>
                  </p>
                  <p>
-                     <!-- <app-select-amount></app-select-amount> -->
+                     <app-select-amount (loanAmount) = "getAmount($event)" (loanDate) = "getDate($event)"></app-select-amount>
                  </p>
               </mat-card-content>
               <mat-divider inset></mat-divider>
