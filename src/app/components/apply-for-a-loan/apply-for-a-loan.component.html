@@ -1,0 +1,43 @@
+ <div class = "center-content">
+    <form>
+         <mat-card class="example-card" style="width: 500px;">
+             <mat-card-header>
+                 <mat-card-title>Solicitud de préstamo</mat-card-title>
+                 <mat-card-subtitle>Diligencie los datos del préstamo</mat-card-subtitle>
+             </mat-card-header>
+             <mat-divider inset class="mt-10"></mat-divider>
+
+             <mat-card-content>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Cédula</mat-label>
+                         <input matInput placeholder="Cédula">
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                      </mat-form-field>
+                 </p>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Nombre</mat-label>
+                         <input matInput placeholder="Nombre">
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                     </mat-form-field>
+                 </p>
+                 <p>
+                     <mat-form-field appearance="outline">
+                         <mat-label>Correo</mat-label>
+                         <input matInput placeholder="Correo">
+                        <!-- <mat-hint>Cédula</mat-hint> -->
+                     </mat-form-field>
+                 </p>
+                 <p>
+                     <app-select-amount></app-select-amount>
+                 </p>
+              </mat-card-content>
+              <mat-divider inset></mat-divider>
+              <mat-card-actions>
+                 <button mat-button>Enviar</button>
+                 <button mat-button>Cancelar</button>
+              </mat-card-actions>
+          </mat-card>
+     </form>
+ </div>
