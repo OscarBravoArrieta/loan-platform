@@ -1,6 +1,11 @@
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireModule } from '@angular/fire';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
+import { environment } from 'src/environments/environment';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
@@ -38,6 +43,8 @@ import { RequestListComponent } from './components/request-list/request-list.com
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
     MatSliderModule,
     MatButtonModule,
     MatMenuModule,

@@ -29,11 +29,18 @@
          this.statusForm = this.loanForm.invalid
 
          if (this.loanForm.valid) {
+             let newLoan = {
+                idUser: this.loanForm.value.idUser,
+                name: this.loanForm.value.name,
+                email: this.loanForm.value.email,
+                loanAmount: this.loanAmount,
+                loanDate: this.loanDate
 
-          console.log("Todos los datos son válidos")
+             }
+             console.log("All data is valid", newLoan)
          }
          else {
-            console.log("Hay datos inválidos en el formulario")
+            console.log("There is invalid data in the form")
          }
      }
      //-----------------------------------------------------------------------------------------------------
